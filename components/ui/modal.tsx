@@ -1,5 +1,6 @@
 "use client";
 
+import { X } from "lucide-react";
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,10 @@ export type ModalProps = {
   overlayClassName?: string;
   labelledBy?: string;
   describedBy?: string;
+  /** When false, clicking the backdrop does not close the modal. Defaults to false. */
+  closeOnOverlayClick?: boolean;
+  /** Show the top-right close (X) button. Defaults to true. */
+  showCloseButton?: boolean;
 };
 
 export function Modal({
@@ -22,6 +27,8 @@ export function Modal({
   overlayClassName,
   labelledBy,
   describedBy,
+  closeOnOverlayClick = false,
+  showCloseButton = true,
 }: ModalProps) {
   const titleId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
@@ -53,9 +60,13 @@ export function Modal({
         "fixed inset-0 z-50 flex items-center justify-center p-4",
         overlayClassName,
       )}
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
+      onMouseDown={
+        closeOnOverlayClick
+          ? (event) => {
+              if (event.target === event.currentTarget) onClose();
+            }
+          : undefined
+      }
     >
       <div
         ref={panelRef}
@@ -64,9 +75,18 @@ export function Modal({
         aria-labelledby={labelledBy ?? titleId}
         aria-describedby={describedBy}
         tabIndex={-1}
-        className={cn("outline-none", className)}
-        onMouseDown={(event) => event.stopPropagation()}
+        className={cn("relative outline-none", className)}
       >
+        {showCloseButton ? (
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-3 top-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full text-icon-default transition-colors hover:bg-bg-subtle hover:text-text-heading"
+          >
+            <X size={20} strokeWidth={2} aria-hidden />
+          </button>
+        ) : null}
         {children}
       </div>
     </div>,
