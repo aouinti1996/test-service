@@ -32,6 +32,7 @@ export {
   NAV_ITEMS,
   NavLink,
   Navbar,
+  ScrollNavbar,
 } from "./navbar";
 export type { NavbarVariant } from "./navbar";
 export type {

@@ -1,4 +1,5 @@
 export { Navbar } from "./navbar";
+export { ScrollNavbar } from "./scroll-navbar";
 export type { NavbarProps, NavbarVariant } from "./navbar";
 export { NavLink } from "./nav-link";
 export type { NavLinkProps } from "./nav-link";

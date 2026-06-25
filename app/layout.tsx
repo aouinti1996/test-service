@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { AuthModalProvider } from "@/components/auth";
 import { Footer } from "@/components/footer";
+import { ScrollNavbar } from "@/components/navbar";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -34,6 +35,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-bg-surface">
         <AuthModalProvider>
+          <ScrollNavbar />
           <main className="flex-1">{children}</main>
           <Footer />
         </AuthModalProvider>
