@@ -1,0 +1,120 @@
+/**
+ * Active Service — semantic color tokens (user-provided only)
+ * Light mode is default (:root). Dark mode via .dark or [data-theme="dark"].
+ */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Text */
+  --text-text-heading: var(--gray-900);
+  --text-text-body: var(--gray-800);
+  --text-text-body-small: var(--gray-700);
+  --text-text-label: var(--gray-600);
+  --text-text-secondary: var(--gray-500);
+  --text-text-disabled: var(--gray-300);
+  --text-text-inverse: var(--base-white);
+
+  /* Background */
+  --bg-bg-surface: var(--base-light-white);
+  --bg-bg-elevated: var(--base-white);
+  --bg-bg-subtle: var(--gray-25);
+  --bg-bg-subtle-transparent: var(--transparent-gray-25);
+  --bg-bg-shadow: var(--transparent-black-shadow);
+  --bg-bg-inverse: var(--gray-900);
+  --bg-bg-disabled: var(--gray-50);
+  --bg-bg-input: var(--base-white);
+
+  /* Border */
+  --border-border-subtle: var(--gray-50);
+  --border-border-default: var(--gray-100);
+
+  /* Primary */
+  --primary-primary-default: var(--primary-500);
+  --primary-primary-hover: var(--primary-600);
+  --primary-primary-active: var(--primary-700);
+  --primary-primary-disabled: var(--primary-100);
+  --primary-primary-subtle-bg: var(--primary-50);
+  --primary-primary-subtle-text: var(--primary-600);
+  --primary-primary-container-content: var(--primary-600);
+
+  /* States */
+  --state-state-success-bg: var(--success-50);
+  --state-state-success-text: var(--success-600);
+  --state-state-success-border: var(--success-100);
+  --state-state-warning-bg: var(--warning-50);
+  --state-state-warning-text: var(--warning-600);
+  --state-state-warning-border: var(--warning-100);
+  --state-state-error-bg: var(--error-50);
+  --state-state-error-text: var(--error-600);
+  --state-state-error-border: var(--error-100);
+
+  /* Icons */
+  --icon-icon-default: var(--gray-500);
+  --icon-icon-dark: var(--gray-900);
+  --icon-icon-inverse: var(--base-white);
+  --icon-icon-disabled: var(--gray-300);
+  --icon-icon-primary: var(--primary-500);
+  --icon-icon-success: var(--success-600);
+  --icon-icon-warning: var(--warning-600);
+  --icon-icon-error: var(--error-600);
+}
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Text */
+  --text-text-heading: var(--gray-50);
+  --text-text-body: var(--gray-200);
+  --text-text-body-small: var(--gray-300);
+  --text-text-label: var(--gray-400);
+  --text-text-secondary: var(--gray-400);
+  --text-text-disabled: var(--gray-600);
+  --text-text-inverse: var(--base-black);
+
+  /* Background */
+  --bg-bg-surface: var(--gray-900);
+  --bg-bg-elevated: var(--gray-800);
+  --bg-bg-subtle: var(--gray-700);
+  --bg-bg-subtle-transparent: var(--transparent-gray-700);
+  --bg-bg-shadow: var(--transparent-white-shadow);
+  --bg-bg-inverse: var(--base-white);
+  --bg-bg-disabled: var(--gray-800);
+  --bg-bg-input: var(--gray-900);
+
+  /* Border */
+  --border-border-subtle: var(--gray-800);
+  --border-border-default: var(--gray-700);
+
+  /* Primary */
+  --primary-primary-default: var(--primary-500);
+  --primary-primary-hover: var(--primary-600);
+  --primary-primary-active: var(--primary-700);
+  --primary-primary-disabled: var(--primary-900);
+  --primary-primary-subtle-bg: var(--primary-900);
+  --primary-primary-subtle-text: var(--primary-400);
+  --primary-primary-container-content: var(--base-white);
+
+  /* States */
+  --state-state-success-bg: var(--success-900);
+  --state-state-success-text: var(--success-600);
+  --state-state-success-border: var(--success-100);
+  --state-state-warning-bg: var(--warning-900);
+  --state-state-warning-text: var(--warning-600);
+  --state-state-warning-border: var(--warning-100);
+  --state-state-error-bg: var(--error-900);
+  --state-state-error-text: var(--error-600);
+  --state-state-error-border: var(--error-100);
+
+  /* Icons */
+  --icon-icon-default: var(--gray-200);
+  --icon-icon-dark: var(--base-white);
+  --icon-icon-inverse: var(--gray-900);
+  --icon-icon-disabled: var(--gray-600);
+  --icon-icon-primary: var(--primary-500);
+  --icon-icon-success: var(--success-400);
+  --icon-icon-warning: var(--warning-400);
+  --icon-icon-error: var(--error-400);
+}

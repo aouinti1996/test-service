@@ -1,0 +1,280 @@
+/**
+ * Active Service — typography tokens (Figma Typography Style Guide)
+ * Poppins (Headings) + Roboto (Display / Body / Data / Caption)
+ */
+
+@utility text-display-large-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-display-large-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-display-large-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-display-small-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-display-small-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-display-small-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-heading-h1-bold {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h1-medium {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h1-regular {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h2-bold {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h2-medium {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h2-regular {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h3-bold {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h3-medium {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@utility text-heading-h3-regular {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@utility text-body-large-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@utility text-body-large-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@utility text-body-large-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@utility text-body-small-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-body-small-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-body-small-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@utility text-data-large-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-data-large-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-data-large-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-data-small-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-data-small-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-data-small-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility text-caption-large-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-large-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-large-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-small-bold {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-small-medium {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+@utility text-caption-small-regular {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+}
