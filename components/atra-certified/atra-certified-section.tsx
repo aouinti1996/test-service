@@ -10,7 +10,7 @@ export type AtraCertifiedSectionProps = {
 export function AtraCertifiedSection({ className }: AtraCertifiedSectionProps) {
   return (
     <AnimatedSection variant="default" className={cn("w-full bg-bg-surface", className)}>
-      <SiteContainer className="p-6">
+      <SiteContainer className="px-4 pb-10 pt-0 xl:p-6">
         <AtraCertifiedCard />
       </SiteContainer>
     </AnimatedSection>

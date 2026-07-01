@@ -18,6 +18,10 @@ export type IntegrationInfrastructureItem = {
   chip: string;
   icon: LucideIcon;
   image: string;
+  mobileImage?: string;
+  mobileImageClassName?: string;
+  mobileImageWrapperClassName?: string;
+  imageWrapperClassName?: string;
   imageClassName?: string;
 };
 
@@ -58,6 +62,7 @@ export const INTEGRATION_INFRASTRUCTURE: IntegrationInfrastructureItem[] = [
     chip: "One Integration. Nationwide Access.",
     icon: Globe,
     image: "/integration-page/infrastructure-coverage.png",
+    mobileImage: "/integration-page/infrastructure-coverage-mobile.png",
   },
   {
     title: "Instant Transactions",
@@ -66,6 +71,9 @@ export const INTEGRATION_INFRASTRUCTURE: IntegrationInfrastructureItem[] = [
     chip: "Fast. Reliable. Always On.",
     icon: Zap,
     image: "/integration-page/infrastructure-transactions.png",
+    mobileImage: "/integration-page/infrastructure-transactions-mobile.png",
+    mobileImageWrapperClassName:
+      "left-1/2 top-[calc(50%+12.75px)] h-[174px] w-[262px] -translate-x-1/2 -translate-y-1/2",
     imageClassName: "absolute left-[73.33px] top-[20px] h-[200px] w-[302px] object-cover",
   },
   {
@@ -75,8 +83,14 @@ export const INTEGRATION_INFRASTRUCTURE: IntegrationInfrastructureItem[] = [
     chip: "Secure Standards. Trusted by Distributors.",
     icon: ShieldCheck,
     image: "/integration-page/infrastructure-security.png",
+    mobileImage: "/integration-page/infrastructure-security-mobile.png",
+    mobileImageWrapperClassName:
+      "left-1/2 top-[calc(50%+0.25px)] h-[181px] w-[296px] -translate-x-1/2 -translate-y-1/2",
+    mobileImageClassName:
+      "absolute h-[164.16%] left-[-0.18%] top-[-24.28%] w-[100.35%]",
+    imageWrapperClassName: "left-[104.67px] top-[13px] h-[187px] w-[306px]",
     imageClassName:
-      "absolute left-[104.67px] top-[13px] h-[187px] w-[306px] object-cover object-top",
+      "absolute h-[164.16%] left-[-0.18%] top-[-24.28%] w-[100.35%]",
   },
 ];
 

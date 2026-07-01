@@ -11,6 +11,7 @@ import { AnimatedSection } from "@/components/motion";
 import {
   IntegrationStepCard,
   IntegrationStepConnector,
+  IntegrationStepConnectorVertical,
 } from "./integration-step-card";
 
 export type IntegrationHowItWorksSectionProps = {
@@ -22,28 +23,32 @@ export function IntegrationHowItWorksSection({
 }: IntegrationHowItWorksSectionProps) {
   return (
     <AnimatedSection variant="default" className={cn("w-full bg-base-white", className)}>
-      <SiteContainer className="flex flex-col items-center gap-16 px-20 py-20">
+      <SiteContainer className="flex flex-col gap-4 p-4 xl:items-center xl:gap-16 xl:px-20 xl:py-20">
         <SectionHeader
+          className="items-start gap-4 text-left xl:items-center xl:text-center"
           title={
             <>
-              How It <span className="text-primary-subtle-text">Works</span>
+              How It <span className="text-primary-600 xl:text-primary-subtle-text">Works</span>
             </>
           }
           description="Get started in minutes and scale your business with our simple integration process."
         />
 
-        <div className="flex w-full items-start">
+        <div className="flex w-full flex-col items-start xl:flex-row xl:items-start">
           {INTEGRATION_STEPS.map((step, index) => (
             <Fragment key={step.step}>
               <IntegrationStepCard {...step} />
               {index < INTEGRATION_STEPS.length - 1 ? (
-                <IntegrationStepConnector />
+                <>
+                  <IntegrationStepConnectorVertical />
+                  <IntegrationStepConnector />
+                </>
               ) : null}
             </Fragment>
           ))}
         </div>
 
-        <div className="flex items-center gap-4 rounded-lg bg-primary-subtle-bg px-6 py-3">
+        <div className="hidden items-center gap-4 rounded-lg bg-primary-subtle-bg px-6 py-3 xl:flex">
           {INTEGRATION_HOW_IT_WORKS_FEATURES.map((feature, index) => (
             <Fragment key={feature.label}>
               {index > 0 ? (

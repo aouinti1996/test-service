@@ -1,3 +1,4 @@
+export { AboutHeroGradientMobile } from "./about-hero-gradient-mobile";
 export { AboutHeroSection } from "./about-hero-section";
 export type { AboutHeroSectionProps } from "./about-hero-section";
 export { AboutHeroCard } from "./about-hero-card";

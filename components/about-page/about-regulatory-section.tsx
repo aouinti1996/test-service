@@ -13,8 +13,8 @@ export type AboutRegulatorySectionProps = {
 export function AboutRegulatorySection({ className }: AboutRegulatorySectionProps) {
   return (
     <AnimatedSection variant="default" className={cn("w-full bg-bg-elevated", className)}>
-      <SiteContainer className="px-20 py-20">
-        <div className="relative flex items-center gap-16 overflow-hidden rounded-3xl border border-border-subtle bg-bg-surface p-12">
+      <SiteContainer className="px-4 pb-10 pt-0 xl:px-20 xl:py-20">
+        <div className="relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-border-subtle bg-bg-surface p-4 xl:flex-row xl:items-center xl:gap-16 xl:p-12">
           <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
             <img
               src="/about-page/regulatory-gradient.svg"
@@ -33,16 +33,16 @@ export function AboutRegulatorySection({ className }: AboutRegulatorySectionProp
             />
           </div>
 
-          <div className="relative z-10 flex min-w-0 flex-1 flex-col gap-6">
-            <h2 className="text-heading-h2-bold text-text-heading">
+          <div className="relative z-10 flex min-w-0 flex-1 flex-col gap-4 xl:gap-6">
+            <h2 className="text-xl font-bold leading-7 text-text-heading xl:text-heading-h2-bold">
               {ABOUT_REGULATORY.title}
             </h2>
-            <p className="text-body-large-regular text-text-body">
+            <p className="text-sm leading-5 text-text-body xl:text-body-large-regular">
               {ABOUT_REGULATORY.description}
             </p>
             <div className="flex items-center gap-3">
               <Icon icon={ShieldCheck} variant="primary" size={24} strokeWidth={2} />
-              <p className="text-caption-large-bold text-text-heading">
+              <p className="text-xs font-bold leading-normal text-text-heading xl:text-caption-large-bold">
                 {ABOUT_REGULATORY.license}
               </p>
             </div>

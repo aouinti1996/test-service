@@ -15,8 +15,14 @@ export function AboutLeaderCard({
   className,
 }: AboutLeaderCardProps) {
   return (
-    <article className={cn("flex min-w-0 flex-1 flex-col items-center gap-5", className)}>
-      <div className="relative aspect-square w-full overflow-hidden rounded-3xl">
+    <article
+      className={cn(
+        "flex w-full items-center gap-5",
+        "xl:min-w-0 xl:flex-1 xl:flex-col xl:items-center xl:gap-5",
+        className,
+      )}
+    >
+      <div className="relative size-20 shrink-0 overflow-hidden rounded-3xl xl:aspect-square xl:h-auto xl:w-full">
         <Image
           src={image}
           alt={name}
@@ -25,9 +31,13 @@ export function AboutLeaderCard({
           className="object-cover object-center"
         />
       </div>
-      <div className="flex w-full flex-col items-center gap-1 text-center">
-        <p className="text-body-large-bold text-text-heading">{name}</p>
-        <p className="text-body-small-medium text-primary-subtle-text">{role}</p>
+      <div className="flex min-w-0 flex-1 flex-col gap-1 xl:w-full xl:flex-none xl:items-center xl:text-center">
+        <p className="text-base font-bold leading-6 text-text-heading xl:text-body-large-bold">
+          {name}
+        </p>
+        <p className="text-sm font-medium leading-5 text-primary-600 xl:text-body-small-medium xl:text-primary-subtle-text">
+          {role}
+        </p>
       </div>
     </article>
   );

@@ -5,7 +5,7 @@ export function AtraCertifiedGradient() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-[-1px] bottom-[-92px] overflow-hidden"
+      className="pointer-events-none absolute inset-[-1px] bottom-[-92px] hidden overflow-hidden xl:block"
     >
       <img
         src="/atra-certified/bg.svg"

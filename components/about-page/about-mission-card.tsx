@@ -18,17 +18,28 @@ export function AboutMissionCard({
   return (
     <article
       className={cn(
-        "flex w-full flex-col gap-4 rounded-3xl border border-border-subtle bg-bg-elevated p-6",
+        "flex w-full flex-col gap-4 rounded-3xl border border-border-subtle bg-bg-elevated p-4 xl:p-6",
         className,
       )}
     >
       <div className="flex items-center gap-4">
-        <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-primary-subtle-bg">
-          <Icon icon={icon} variant="primary" size={32} strokeWidth={2} />
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-subtle-bg xl:size-16 xl:rounded-2xl">
+          <Icon icon={icon} variant="primary" size={20} strokeWidth={2} className="xl:hidden" />
+          <Icon
+            icon={icon}
+            variant="primary"
+            size={32}
+            strokeWidth={2}
+            className="hidden xl:block"
+          />
         </div>
-        <h3 className="text-heading-h2-bold text-text-heading">{title}</h3>
+        <h3 className="text-xl font-bold leading-7 text-text-heading xl:text-heading-h2-bold">
+          {title}
+        </h3>
       </div>
-      <p className="text-body-large-regular text-text-body">{description}</p>
+      <p className="text-sm leading-5 text-text-body xl:text-body-large-regular">
+        {description}
+      </p>
     </article>
   );
 }

@@ -1,6 +1,7 @@
 import { SiteContainer } from "@/components/layout/site-container";
 import { cn } from "@/lib/utils";
 import { DistributorHeroCard } from "./distributor-hero-card";
+import { DistributorHeroGradientMobile } from "./distributor-hero-gradient-mobile";
 import { AnimatedSection } from "@/components/motion";
 
 export type DistributorHeroSectionProps = {
@@ -9,8 +10,12 @@ export type DistributorHeroSectionProps = {
 
 export function DistributorHeroSection({ className }: DistributorHeroSectionProps) {
   return (
-    <AnimatedSection variant="hero" className={cn("w-full", className)}>
-      <SiteContainer className="p-6">
+    <AnimatedSection
+      variant="hero"
+      className={cn("relative isolate w-full overflow-hidden", className)}
+    >
+      <DistributorHeroGradientMobile />
+      <SiteContainer className="relative z-10 xl:p-6">
         <DistributorHeroCard />
       </SiteContainer>
     </AnimatedSection>

@@ -12,8 +12,16 @@ export function FooterOperatorPill({
   logoWidth,
   logoHeight,
   logoClassName,
+  mobileLogo,
+  mobileLogoWidth,
+  mobileLogoHeight,
+  mobileLogoObjectFit = "cover",
   className,
 }: FooterOperatorPillProps) {
+  const mobileWidth = mobileLogoWidth ?? logoWidth;
+  const mobileHeight = mobileLogoHeight ?? logoHeight;
+  const mobileSrc = mobileLogo ?? logo;
+
   return (
     <div
       className={cn(
@@ -21,16 +29,41 @@ export function FooterOperatorPill({
         className,
       )}
     >
-      <span className="flex h-4 shrink-0 items-center">
+      <div
+        className="relative shrink-0 overflow-hidden xl:hidden"
+        style={{ width: mobileWidth, height: mobileHeight }}
+      >
+        <Image
+          src={mobileSrc}
+          alt=""
+          fill
+          unoptimized
+          sizes={`${mobileWidth}px`}
+          className={cn(
+            mobileLogoObjectFit === "contain" ? "object-contain" : "object-cover",
+            "object-center",
+          )}
+        />
+      </div>
+
+      <span
+        className="relative hidden h-4 shrink-0 items-center xl:flex"
+        style={{ width: logoWidth }}
+      >
         <Image
           src={logo}
           alt=""
           width={logoWidth}
           height={logoHeight}
           aria-hidden
-          className={cn("h-4 w-auto max-w-10 object-contain object-left", logoClassName)}
+          className={cn(
+            "h-4 max-w-none object-contain object-left",
+            logoClassName,
+          )}
+          style={{ width: logoWidth, height: logoHeight }}
         />
       </span>
+
       <span className="whitespace-nowrap text-caption-large-bold text-text-heading">
         {name}
       </span>

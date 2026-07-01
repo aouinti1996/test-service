@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Package, Smartphone, Wifi } from "lucide-react";
+import { Package, Smartphone, Wallet, Wifi } from "lucide-react";
 
 export type ServicesPageItem = {
   id: string;
@@ -9,6 +9,9 @@ export type ServicesPageItem = {
   icon: LucideIcon;
   backgroundImage: string;
   backgroundImageClassName?: string;
+  /** Figma 648:5082 — mobile card watermark position */
+  mobileBackgroundClassName?: string;
+  mobileBackgroundWrapperClassName?: string;
 };
 
 export const SERVICES_PAGE_ITEMS: ServicesPageItem[] = [
@@ -24,6 +27,8 @@ export const SERVICES_PAGE_ITEMS: ServicesPageItem[] = [
     ],
     icon: Smartphone,
     backgroundImage: "/services-section/mobile-recharge-bg.png",
+    mobileBackgroundWrapperClassName:
+      "right-[-1px] top-[-39.8px] h-[150px] w-[200px]",
   },
   {
     id: "bundles-data",
@@ -39,6 +44,29 @@ export const SERVICES_PAGE_ITEMS: ServicesPageItem[] = [
     backgroundImage: "/services-section/bundles-data-bg.png",
     backgroundImageClassName:
       "absolute h-[79.5%] left-[-4.5%] top-[4.06%] w-[89.43%] max-w-none",
+    mobileBackgroundWrapperClassName:
+      "bottom-[-40.2px] right-[-1px] h-[150px] w-[200px]",
+    mobileBackgroundClassName:
+      "absolute h-[79.5%] left-[-4.5%] top-[4.06%] w-[89.43%] max-w-none",
+  },
+  {
+    id: "digital-wallet",
+    title: "Digital Wallet",
+    description:
+      "Use a secure digital wallet to store funds, manage payments, and handle everyday transactions from one convenient app. Customers can pay utility bills, make local payments, track activity, and manage their balance with a simple wallet experience designed for speed, safety, and local needs.",
+    benefits: [
+      "Store and manage funds securely",
+      "Pay bills and local merchants with ease",
+      "Track wallet balance and transaction history",
+    ],
+    icon: Wallet,
+    backgroundImage: "/services-section/digital-wallet-bg.png",
+    backgroundImageClassName:
+      "absolute h-[80.61%] left-0 top-[9.66%] w-[90.69%] max-w-none",
+    mobileBackgroundWrapperClassName:
+      "right-[-1px] top-1/2 h-[150px] w-[200px] -translate-y-1/2",
+    mobileBackgroundClassName:
+      "absolute h-[80.61%] left-0 top-[9.66%] w-[90.69%] max-w-none",
   },
   {
     id: "retailer-stock",
@@ -53,6 +81,10 @@ export const SERVICES_PAGE_ITEMS: ServicesPageItem[] = [
     icon: Package,
     backgroundImage: "/services-section/retailer-stock-bg.png",
     backgroundImageClassName:
+      "absolute h-[76.71%] left-[4.24%] top-[16.76%] w-[86.3%] max-w-none",
+    mobileBackgroundWrapperClassName:
+      "right-[-1px] top-1/2 h-[150px] w-[200px] -translate-y-1/2",
+    mobileBackgroundClassName:
       "absolute h-[76.71%] left-[4.24%] top-[16.76%] w-[86.3%] max-w-none",
   },
 ];

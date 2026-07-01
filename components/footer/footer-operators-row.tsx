@@ -4,12 +4,12 @@ import { FooterSocialLinks } from "./footer-social-links";
 
 export function FooterOperatorsRow() {
   return (
-    <div className="flex w-full items-center justify-between border-y border-border-subtle bg-bg-elevated px-20 py-8 rounded-xl">
-      <div className="flex flex-col gap-4">
-        <p className="whitespace-nowrap text-body-small-medium text-text-heading">
+    <div className="flex w-full flex-col gap-6 border-y border-border-subtle bg-bg-elevated p-4 xl:flex-row xl:items-center xl:justify-between xl:gap-0 xl:rounded-xl xl:px-20 xl:py-8">
+      <div className="flex flex-col gap-2 xl:gap-4">
+        <p className="text-body-small-medium text-text-heading xl:whitespace-nowrap">
           We Support All Major Operators
         </p>
-        <div className="flex flex-wrap items-start gap-2">
+        <div className="flex flex-wrap content-start items-start gap-2">
           {FOOTER_OPERATORS.map((operator) => (
             <FooterOperatorPill key={operator.name} {...operator} />
           ))}

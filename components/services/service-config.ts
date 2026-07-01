@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Package, Smartphone, Wifi } from "lucide-react";
+import { Package, Smartphone, Wallet, Wifi } from "lucide-react";
 
 export type ServiceItem = {
   title: string;
@@ -28,6 +28,16 @@ export const SERVICES: ServiceItem[] = [
     backgroundImage: "/services-section/bundles-data-bg.png",
     backgroundImageClassName:
       "absolute h-[79.5%] left-[-4.5%] top-[4.06%] w-[89.43%] max-w-none",
+  },
+  {
+    title: "Digital Wallet",
+    description:
+      "Securely store funds and pay utility bills or local merchants with our integrated e-wallet.",
+    href: "/services/digital-wallet",
+    icon: Wallet,
+    backgroundImage: "/services-section/digital-wallet-bg.png",
+    backgroundImageClassName:
+      "absolute h-[80.61%] left-0 top-[9.66%] w-[90.69%] max-w-none",
   },
   {
     title: "Retailer Stock",

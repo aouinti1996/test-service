@@ -21,11 +21,12 @@ export function DistributorBenefitCard({
   return (
     <article
       className={cn(
-        "relative flex min-w-0 flex-1 flex-col gap-6 overflow-hidden rounded-[20px] border border-border-subtle bg-bg-elevated p-10 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.03)]",
+        "relative flex min-w-0 flex-1 flex-col gap-4 overflow-hidden rounded-[20px] border border-border-subtle bg-bg-elevated p-4 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.03)]",
+        "xl:gap-6 xl:p-10",
         className,
       )}
     >
-      <div className="pointer-events-none absolute -right-px -top-px size-[190px]">
+      <div className="pointer-events-none absolute -right-px -top-px size-[120px] xl:size-[190px]">
         <Image
           src={decorationImage}
           alt=""
@@ -41,8 +42,10 @@ export function DistributorBenefitCard({
       </div>
 
       <div className="relative z-10 flex flex-col gap-3">
-        <h3 className="text-heading-h3-bold text-text-heading">{title}</h3>
-        <p className="text-body-small-regular text-text-secondary">
+        <h3 className="text-base font-bold leading-6 text-text-heading xl:text-heading-h3-bold">
+          {title}
+        </h3>
+        <p className="text-xs leading-4 text-text-secondary xl:text-body-small-regular">
           {description}
         </p>
       </div>

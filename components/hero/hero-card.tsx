@@ -5,14 +5,18 @@ import { HeroPhone } from "./hero-phone";
 
 export function HeroCard() {
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-[24px] border border-border-subtle bg-bg-elevated pb-20">
+    <div className="relative flex flex-col overflow-visible bg-transparent pb-0 xl:min-h-0 xl:flex-1 xl:overflow-hidden xl:rounded-[24px] xl:border xl:border-border-subtle xl:bg-bg-elevated xl:pb-20">
       <HeroGradient />
-      <HeroPhone />
+      <div className="hidden xl:block">
+        <HeroPhone />
+      </div>
 
-      <div className="relative z-10 flex min-h-0 flex-1 flex-col gap-[120px]">
-        <Navbar variant="embedded" activeHref="/" className="shrink-0" />
+      <div className="relative z-10 flex flex-col xl:min-h-0 xl:flex-1 xl:gap-[120px]">
+        <div className="hidden shrink-0 xl:block">
+          <Navbar variant="embedded" activeHref="/" className="shrink-0" />
+        </div>
 
-        <div className="px-20">
+        <div className="xl:px-20">
           <HeroContent />
         </div>
       </div>

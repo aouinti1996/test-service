@@ -12,14 +12,14 @@ const HIDE_THRESHOLD = 24;
 export function ScrollNavbar() {
   const pathname = usePathname();
   const reduceMotion = useReducedMotion();
-  const [visible, setVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     let frame = 0;
 
     const update = () => {
       const y = window.scrollY;
-      setVisible((current) => {
+      setScrolled((current) => {
         if (reduceMotion) return y > SHOW_THRESHOLD;
         if (current) return y > HIDE_THRESHOLD;
         return y > SHOW_THRESHOLD;
@@ -41,27 +41,41 @@ export function ScrollNavbar() {
   }, [reduceMotion]);
 
   return (
-    <AnimatePresence mode="wait">
-      {visible ? (
-        <motion.div
-          key="scroll-navbar"
-          initial={reduceMotion ? false : { y: "-100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={reduceMotion ? undefined : { y: "-100%", opacity: 0 }}
-          transition={{
-            duration: reduceMotion ? 0 : 0.42,
-            ease: MOTION_EASE,
-            opacity: { duration: reduceMotion ? 0 : 0.32 },
-          }}
-          className="fixed inset-x-0 top-0 z-40 will-change-transform"
-        >
-          <Navbar
-            activeHref={pathname}
-            variant="standalone"
-            className="shadow-[0px_4px_16px_rgba(63,63,68,0.08)]"
-          />
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+    <>
+      {/* Mobile: fixed header that stays visible while scrolling */}
+      <div className="fixed inset-x-0 top-0 z-40 xl:hidden">
+        <Navbar
+          activeHref={pathname}
+          variant="standalone"
+          className="shadow-[0px_1px_1px_rgba(63,63,68,0.05),0px_1px_1.5px_rgba(63,63,68,0.1)]"
+        />
+      </div>
+
+      {/* Desktop: reveal on scroll — animate `top` (not transform) to keep logo/text sharp */}
+      <div className="hidden xl:block">
+        <AnimatePresence mode="wait">
+          {scrolled ? (
+            <motion.div
+              key="scroll-navbar"
+              initial={reduceMotion ? false : { top: -80, opacity: 0 }}
+              animate={{ top: 0, opacity: 1 }}
+              exit={reduceMotion ? undefined : { top: -80, opacity: 0 }}
+              transition={{
+                duration: reduceMotion ? 0 : 0.42,
+                ease: MOTION_EASE,
+                opacity: { duration: reduceMotion ? 0 : 0.32 },
+              }}
+              className="fixed inset-x-0 z-40"
+            >
+              <Navbar
+                activeHref={pathname}
+                variant="standalone"
+                className="shadow-[0px_4px_16px_rgba(63,63,68,0.08)]"
+              />
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </div>
+    </>
   );
 }

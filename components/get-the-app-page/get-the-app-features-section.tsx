@@ -15,19 +15,21 @@ export function GetTheAppFeaturesSection({
     <AnimatedSection variant="default" className={cn("relative w-full overflow-hidden", className)}>
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-186px] left-1/2 h-[1365px] w-[2602px] -translate-x-1/2"
+        className="pointer-events-none absolute bottom-[-186px] left-1/2 hidden h-[1365px] w-[2602px] -translate-x-1/2 xl:block"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(251, 252, 255, 0) 0%, rgba(244, 255, 252, 1) 100%)",
         }}
       />
 
-      <SiteContainer className="relative flex flex-col gap-16 px-20 py-20">
+      <SiteContainer className="relative flex flex-col gap-4 px-4 pt-10 pb-0 xl:gap-16 xl:px-20 xl:py-20">
         <SectionHeader
+          className="items-start gap-4 text-left xl:items-center xl:text-center"
+          descriptionClassName="text-base leading-6"
           title={
             <>
               What You{" "}
-              <span className="text-primary-subtle-text">Can Do</span>
+              <span className="text-primary-600 xl:text-primary-subtle-text">Can Do</span>
             </>
           }
           description="Everything you need in one simple app."

@@ -18,7 +18,8 @@ export function CoverageMatterCard({
   return (
     <article
       className={cn(
-        "flex min-w-0 flex-1 gap-5 rounded-2xl bg-bg-elevated p-7 shadow-[0px_4px_10px_rgba(0,191,166,0.08)]",
+        "flex w-full gap-3 rounded-2xl bg-bg-elevated p-4 shadow-[0px_4px_10px_rgba(0,191,166,0.08)]",
+        "xl:min-w-0 xl:flex-1 xl:gap-5 xl:p-7",
         className,
       )}
     >
@@ -29,7 +30,7 @@ export function CoverageMatterCard({
         <h3 className="text-[17px] font-bold leading-normal text-text-heading">
           {title}
         </h3>
-        <p className="text-body-small-regular leading-[1.6] text-text-secondary">
+        <p className="text-sm leading-[1.6] text-text-secondary xl:text-body-small-regular">
           {description}
         </p>
       </div>

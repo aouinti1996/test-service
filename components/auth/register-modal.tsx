@@ -5,6 +5,14 @@ import { Eye, EyeOff, Lock, Mail, User, UserPlus } from "lucide-react";
 import { Icon } from "@/components/icon";
 import { Modal } from "@/components/ui/modal";
 import { cn } from "@/lib/utils";
+import {
+  AuthCard,
+  AuthCardHeader,
+  AuthCardIconBadge,
+  authFooterLinkClassName,
+  authFooterTextClassName,
+  authPrimaryButtonClassName,
+} from "./auth-card";
 import { AuthInput, AuthPhonePrefix } from "./auth-input";
 import { useAuthModal } from "./auth-modal-provider";
 
@@ -25,27 +33,19 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
       onClose={onClose}
       labelledBy={titleId}
       overlayClassName="bg-[#0d3b22]/70 backdrop-blur-sm"
-      className="w-full max-w-[480px]"
+      className="max-w-[480px]"
     >
-      <div className="flex w-full flex-col items-center gap-8 rounded-[40px] border border-white/25 bg-white/80 p-12 shadow-[0px_20px_40px_0px_rgba(0,0,0,0.13)] backdrop-blur-[16px]">
-        <div className="flex size-16 shrink-0 items-center justify-center rounded-[20px] bg-bg-elevated shadow-[0px_4px_4px_rgba(0,0,0,0.06)]">
-          <Icon icon={UserPlus} variant="primary" size={28} strokeWidth={2} />
-        </div>
+      <AuthCard aria-labelledby={titleId}>
+        <AuthCardIconBadge icon={UserPlus} />
 
-        <div className="flex w-full flex-col items-center gap-2 text-center">
-          <h2
-            id={titleId}
-            className="w-full text-heading-h2-bold text-text-heading"
-          >
-            Create Your Account
-          </h2>
-          <p className="w-full text-body-small-regular text-text-secondary">
-            Join millions of users on Active Services
-          </p>
-        </div>
+        <AuthCardHeader
+          titleId={titleId}
+          title="Create Your Account"
+          description="Join millions of users on Active Services"
+        />
 
         <form
-          className="flex w-full flex-col gap-4"
+          className="flex w-full flex-col gap-3 xl:gap-4"
           onSubmit={(event) => event.preventDefault()}
         >
           <AuthInput
@@ -84,8 +84,16 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
                 <Icon
                   icon={showPassword ? Eye : EyeOff}
                   variant="default"
+                  size={18}
+                  strokeWidth={2}
+                  className="xl:hidden"
+                />
+                <Icon
+                  icon={showPassword ? Eye : EyeOff}
+                  variant="default"
                   size={20}
                   strokeWidth={2}
+                  className="hidden xl:block"
                 />
               </button>
             }
@@ -98,7 +106,7 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
             autoComplete="new-password"
           />
 
-          <label className="flex w-full cursor-pointer items-center gap-3">
+          <label className="flex w-full cursor-pointer items-center gap-2.5 xl:gap-3">
             <input
               type="checkbox"
               checked={agreedToTerms}
@@ -108,14 +116,14 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
             <span
               aria-hidden
               className={cn(
-                "flex size-5 shrink-0 items-center justify-center rounded-md border-2 border-primary-default",
+                "flex size-4 shrink-0 items-center justify-center rounded-[5px] border-2 border-primary-default xl:size-5 xl:rounded-md",
                 agreedToTerms && "bg-primary-default",
               )}
             >
               {agreedToTerms ? (
                 <svg
                   viewBox="0 0 12 10"
-                  className="size-3 text-text-inverse"
+                  className="size-2.5 text-text-inverse xl:size-3"
                   aria-hidden
                 >
                   <path
@@ -129,11 +137,11 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
                 </svg>
               ) : null}
             </span>
-            <span className="text-body-small-regular text-text-secondary">
+            <span className="text-xs leading-4 text-text-secondary xl:text-body-small-regular xl:leading-5">
               I agree to{" "}
               <a
                 href="/terms"
-                className="cursor-pointer text-primary-subtle-text underline"
+                className="cursor-pointer text-primary-600 underline xl:text-primary-subtle-text"
                 onClick={(event) => event.stopPropagation()}
               >
                 Terms
@@ -141,7 +149,7 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
               &amp;{" "}
               <a
                 href="/privacy"
-                className="cursor-pointer text-primary-subtle-text underline"
+                className="cursor-pointer text-primary-600 underline xl:text-primary-subtle-text"
                 onClick={(event) => event.stopPropagation()}
               >
                 Privacy Policy
@@ -152,23 +160,26 @@ export function RegisterModal({ open, onClose }: RegisterModalProps) {
           <button
             type="submit"
             disabled={!agreedToTerms}
-            className="flex h-14 w-full cursor-pointer items-center justify-center rounded-2xl bg-primary-default text-body-large-bold text-text-inverse shadow-[0px_8px_8px_rgba(0,191,166,0.25)] transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50"
+            className={cn(
+              authPrimaryButtonClassName,
+              "disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50",
+            )}
           >
             Create Account
           </button>
         </form>
 
-        <p className="text-center text-body-small-regular text-text-secondary">
+        <p className={authFooterTextClassName}>
           Already have an account?{" "}
           <button
             type="button"
-            className="cursor-pointer font-bold text-primary-subtle-text"
+            className={authFooterLinkClassName}
             onClick={switchToLogin}
           >
             Sign In
           </button>
         </p>
-      </div>
+      </AuthCard>
     </Modal>
   );
 }

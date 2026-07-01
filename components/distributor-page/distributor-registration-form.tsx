@@ -2,23 +2,24 @@
 
 import { Button } from "@/components/ui/button";
 import { InputField } from "@/components/ui/input-field";
+import { cn } from "@/lib/utils";
 import { DISTRIBUTOR_FORM_ROWS } from "./distributor-page-config";
 
 export function DistributorRegistrationForm() {
   return (
     <form
-      className="flex w-full max-w-[1000px] flex-col gap-12"
+      className="flex w-full max-w-[1000px] flex-col gap-8 xl:gap-12"
       onSubmit={(event) => event.preventDefault()}
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 xl:gap-6">
         {DISTRIBUTOR_FORM_ROWS.map((row) => (
           <div
             key={row.map((field) => field.id).join("-")}
-            className={
+            className={cn(
               row.length === 1 && row[0]?.fullWidth
                 ? "w-full"
-                : "grid grid-cols-2 gap-6"
-            }
+                : "grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-6",
+            )}
           >
             {row.map((field) =>
               field.fullWidth ? (
@@ -43,9 +44,11 @@ export function DistributorRegistrationForm() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center gap-4">
-        <Button type="submit">Submit Application</Button>
-        <p className="text-center text-caption-large-regular text-text-secondary">
+      <div className="flex flex-col items-stretch gap-4 xl:items-center">
+        <Button type="submit" className="w-full xl:w-auto">
+          Submit Application
+        </Button>
+        <p className="text-center text-xs leading-4 text-text-secondary xl:text-caption-large-regular">
           By submitting this form you agree to our Distributor Terms &amp;
           Conditions.
         </p>

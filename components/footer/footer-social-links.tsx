@@ -4,8 +4,8 @@ import { FooterSocialIconGlyph } from "./footer-social-icon";
 
 export function FooterSocialLinks() {
   return (
-    <div className="flex flex-col items-end gap-4">
-      <p className="whitespace-nowrap text-body-small-medium text-text-heading">
+    <div className="flex flex-col items-start gap-2 xl:items-end xl:gap-4">
+      <p className="text-body-small-medium text-text-heading xl:whitespace-nowrap">
         Follow Us
       </p>
       <div className="flex items-start gap-3">

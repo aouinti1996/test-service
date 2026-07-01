@@ -1,3 +1,4 @@
+export { IntegrationHeroGradientMobile } from "./integration-hero-gradient-mobile";
 export { IntegrationHeroSection } from "./integration-hero-section";
 export type { IntegrationHeroSectionProps } from "./integration-hero-section";
 export { IntegrationHeroCard } from "./integration-hero-card";
@@ -9,7 +10,7 @@ export { IntegrationInfrastructureCard } from "./integration-infrastructure-card
 export type { IntegrationInfrastructureCardProps } from "./integration-infrastructure-card";
 export { IntegrationHowItWorksSection } from "./integration-how-it-works-section";
 export type { IntegrationHowItWorksSectionProps } from "./integration-how-it-works-section";
-export { IntegrationStepCard, IntegrationStepConnector } from "./integration-step-card";
+export { IntegrationStepCard, IntegrationStepConnector, IntegrationStepConnectorVertical } from "./integration-step-card";
 export type { IntegrationStepCardProps } from "./integration-step-card";
 export { IntegrationOptionsSection } from "./integration-options-section";
 export type { IntegrationOptionsSectionProps } from "./integration-options-section";

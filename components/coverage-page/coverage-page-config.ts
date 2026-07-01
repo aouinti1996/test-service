@@ -10,6 +10,7 @@ import {
   Smartphone,
   Store,
   TrendingUp,
+  Wallet,
   Wifi,
   Zap,
 } from "lucide-react";
@@ -26,6 +27,8 @@ export type CoverageServiceCard = {
   description: string;
   href: string;
   icon: LucideIcon;
+  /** Shown on mobile only — desktop layout keeps three cards */
+  mobileOnly?: boolean;
 };
 
 export type CoverageCommunityCard = {
@@ -85,6 +88,14 @@ export const COVERAGE_SERVICES: CoverageServiceCard[] = [
       "Activate internet, voice, and SMS bundles from major operators with ease.",
     href: "/services/bundles-data",
     icon: Wifi,
+  },
+  {
+    title: "Digital Wallet",
+    description:
+      "Securely store funds and pay utility bills or local merchants with our integrated e-wallet.",
+    href: "/services/digital-wallet",
+    icon: Wallet,
+    mobileOnly: true,
   },
   {
     title: "Retailer Stock",

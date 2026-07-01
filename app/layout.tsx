@@ -36,6 +36,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col bg-bg-surface">
         <AuthModalProvider>
           <ScrollNavbar />
+          <div className="h-20 shrink-0 xl:hidden" aria-hidden />
           <main className="flex-1">{children}</main>
           <Footer />
         </AuthModalProvider>

@@ -1,3 +1,4 @@
+export { CoverageHeroGradientMobile } from "./coverage-hero-gradient-mobile";
 export { CoverageHeroSection } from "./coverage-hero-section";
 export type { CoverageHeroSectionProps } from "./coverage-hero-section";
 export { CoverageHeroCard } from "./coverage-hero-card";
@@ -19,6 +20,7 @@ export { CoverageCommunitiesSection } from "./coverage-communities-section";
 export type { CoverageCommunitiesSectionProps } from "./coverage-communities-section";
 export { CoverageCommunityCard } from "./coverage-community-card";
 export type { CoverageCommunityCardProps } from "./coverage-community-card";
+export { CoverageMattersBackgroundMobile } from "./coverage-matters-background-mobile";
 export { CoverageMattersSection } from "./coverage-matters-section";
 export type { CoverageMattersSectionProps } from "./coverage-matters-section";
 export { CoverageMatterCard } from "./coverage-matter-card";

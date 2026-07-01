@@ -21,14 +21,21 @@ function FlagGb({ className }: { className?: string }) {
 export type LanguageSwitcherProps = {
   locale?: string;
   onClick?: () => void;
+  className?: string;
 };
 
 export function LanguageSwitcher({
   locale = "EN",
   onClick,
+  className,
 }: LanguageSwitcherProps) {
   return (
-    <Button variant="outline" onClick={onClick} aria-label={`Language: ${locale}`}>
+    <Button
+      variant="outline"
+      onClick={onClick}
+      aria-label={`Language: ${locale}`}
+      className={className}
+    >
       <FlagGb className="size-5 shrink-0 rounded-full" />
       <span>{locale}</span>
     </Button>

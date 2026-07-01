@@ -10,6 +10,28 @@ export type ContactInfoCardProps = {
   className?: string;
 };
 
+export function ContactInfoCardRow({
+  label,
+  value,
+  hint,
+  icon,
+  className,
+}: ContactInfoCardProps) {
+  return (
+    <div className={cn("flex gap-3", className)}>
+      <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary-subtle-bg">
+        <Icon icon={icon} variant="primary" size={24} strokeWidth={2} />
+      </div>
+
+      <div className="flex min-w-0 flex-1 flex-col gap-1">
+        <p className="text-sm font-medium leading-5 text-text-secondary">{label}</p>
+        <p className="text-base font-bold leading-6 text-text-heading">{value}</p>
+        <p className="text-xs leading-4 text-text-secondary">{hint}</p>
+      </div>
+    </div>
+  );
+}
+
 export function ContactInfoCard({
   label,
   value,

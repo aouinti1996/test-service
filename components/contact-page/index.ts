@@ -1,7 +1,8 @@
 export { ContactHeroSection } from "./contact-hero-section";
 export type { ContactHeroSectionProps } from "./contact-hero-section";
 export { ContactHeroBackground } from "./contact-hero-background";
-export { ContactInfoCard } from "./contact-info-card";
+export { ContactHeroGradientMobile } from "./contact-hero-gradient-mobile";
+export { ContactInfoCard, ContactInfoCardRow } from "./contact-info-card";
 export type { ContactInfoCardProps } from "./contact-info-card";
 export { ContactMessageSection } from "./contact-message-section";
 export type { ContactMessageSectionProps } from "./contact-message-section";

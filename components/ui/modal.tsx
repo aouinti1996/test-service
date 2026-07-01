@@ -57,7 +57,7 @@ export function Modal({
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-50 flex items-center justify-center p-4",
+        "fixed inset-0 z-50 flex justify-center overflow-y-auto overscroll-contain p-3 xl:p-4",
         overlayClassName,
       )}
       onMouseDown={
@@ -75,16 +75,17 @@ export function Modal({
         aria-labelledby={labelledBy ?? titleId}
         aria-describedby={describedBy}
         tabIndex={-1}
-        className={cn("relative outline-none", className)}
+        className={cn("relative my-auto w-full outline-none", className)}
       >
         {showCloseButton ? (
           <button
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="absolute right-3 top-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full text-icon-default transition-colors hover:bg-bg-subtle hover:text-text-heading"
+            className="absolute right-0 top-0 z-10 flex size-8 cursor-pointer items-center justify-center rounded-full text-icon-default transition-colors hover:bg-bg-subtle hover:text-text-heading xl:right-3 xl:top-3 xl:size-10"
           >
-            <X size={20} strokeWidth={2} aria-hidden />
+            <X size={18} strokeWidth={2} aria-hidden className="xl:hidden" />
+            <X size={20} strokeWidth={2} aria-hidden className="hidden xl:block" />
           </button>
         ) : null}
         {children}

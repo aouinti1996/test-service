@@ -5,7 +5,9 @@ import { CONTACT_SOCIAL_LINKS } from "./contact-page-config";
 export function ContactSocialLinks() {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-body-small-bold text-text-heading">FOLLOW US</p>
+      <p className="text-sm font-bold leading-5 text-text-heading xl:text-body-small-bold">
+        FOLLOW US
+      </p>
       <div className="flex items-start gap-3">
         {CONTACT_SOCIAL_LINKS.map((social) => (
           <Link

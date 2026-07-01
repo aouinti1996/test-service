@@ -10,9 +10,10 @@ export type ServicesSectionProps = {
 
 export function ServicesSection({ className }: ServicesSectionProps) {
   return (
-    <AnimatedSection variant="default" className={cn("w-full bg-bg-surface", className)}>
-      <SiteContainer className="flex flex-col gap-10 px-20 py-20">
+    <AnimatedSection variant="default" className={cn("relative z-10 w-full bg-bg-surface", className)}>
+      <SiteContainer className="flex flex-col gap-4 px-4 pb-10 pt-0 xl:gap-10 xl:px-20 xl:py-20">
         <SectionHeader
+          className="items-start text-left xl:items-center xl:text-center"
           title={
             <>
               Everything You Need,{" "}

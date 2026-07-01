@@ -8,9 +8,15 @@ export type FooterNavColumnProps = FooterNavGroup & {
 
 export function FooterNavColumn({ title, links, className }: FooterNavColumnProps) {
   return (
-    <nav aria-label={title} className={cn("flex w-40 flex-col gap-4", className)}>
+    <nav
+      aria-label={title}
+      className={cn(
+        "flex w-[120px] flex-col gap-2 xl:w-40 xl:gap-4",
+        className,
+      )}
+    >
       <p className="text-body-small-medium text-text-heading">{title}</p>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-2 xl:gap-3">
         {links.map((link) => (
           <li key={link.label}>
             <Link

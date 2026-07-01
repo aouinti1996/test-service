@@ -10,24 +10,28 @@ export type AboutLeadershipSectionProps = {
 
 export function AboutLeadershipSection({ className }: AboutLeadershipSectionProps) {
   return (
-    <AnimatedSection variant="default"
+    <AnimatedSection
+      variant="default"
       className={cn(
         "w-full bg-gradient-to-b from-transparent to-bg-elevated",
         className,
       )}
     >
-      <SiteContainer className="flex items-center gap-16 px-20 py-20">
-        <div className="flex w-[608px] shrink-0 flex-col gap-4 text-center">
-          <h2 className="text-heading-h1-bold text-text-heading">
-            Our <span className="text-primary-subtle-text">Leadership Team</span>
+      <SiteContainer className="flex flex-col gap-4 px-4 py-4 xl:flex-row xl:items-center xl:gap-16 xl:px-20 xl:py-20">
+        <div className="flex w-full shrink-0 flex-col gap-4 text-left xl:w-[608px] xl:text-center">
+          <h2 className="text-2xl font-bold leading-8 text-text-heading xl:text-heading-h1-bold">
+            Our{" "}
+            <span className="text-primary-600 xl:text-primary-subtle-text">
+              Leadership Team
+            </span>
           </h2>
-          <p className="text-body-large-regular text-text-body-small">
+          <p className="text-base leading-6 text-text-body-small xl:text-body-large-regular">
             A group of experienced professionals dedicated to transforming telecom
             services in the country.
           </p>
         </div>
 
-        <div className="flex min-w-0 flex-1 gap-8">
+        <div className="flex w-full flex-col gap-4 xl:min-w-0 xl:flex-1 xl:flex-row xl:gap-8">
           {ABOUT_LEADERS.map((leader) => (
             <AboutLeaderCard
               key={leader.name}

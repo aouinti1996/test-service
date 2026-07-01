@@ -10,7 +10,12 @@ export type FooterProps = {
 
 export function Footer({ className }: FooterProps) {
   return (
-    <footer className={cn("w-full bg-bg-surface", className)}>
+    <footer
+      className={cn(
+        "w-full bg-bg-surface shadow-[0px_-1px_1px_rgba(63,63,68,0.05),0px_-1px_1.5px_rgba(63,63,68,0.1)] xl:shadow-none",
+        className,
+      )}
+    >
       <SiteContainer>
         <FooterMain />
         <FooterOperatorsRow />

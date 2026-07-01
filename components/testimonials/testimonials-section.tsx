@@ -10,9 +10,11 @@ export type TestimonialsSectionProps = {
 
 export function TestimonialsSection({ className }: TestimonialsSectionProps) {
   return (
-    <AnimatedSection variant="default" className={cn("w-full bg-bg-elevated", className)}>
-      <SiteContainer className="flex flex-col items-center gap-16 px-20 py-20">
+    <AnimatedSection variant="default" className={cn("w-full xl:bg-bg-elevated", className)}>
+      <SiteContainer className="flex flex-col items-start gap-4 px-4 pb-10 pt-0 xl:items-center xl:gap-16 xl:px-20 xl:py-20">
         <SectionHeader
+          size="compact"
+          className="items-start text-left xl:items-center xl:text-center"
           title={
             <>
               <span className="text-primary-subtle-text">Trusted by Retailers</span>

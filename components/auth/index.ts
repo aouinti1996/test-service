@@ -1,3 +1,5 @@
+export { AuthCard, AuthCardHeader, AuthCardIconBadge, authFooterLinkClassName, authFooterTextClassName, authPrimaryButtonClassName } from "./auth-card";
+export type { AuthCardProps, AuthCardHeaderProps, AuthCardIconBadgeProps } from "./auth-card";
 export { AuthInput, AuthPhonePrefix } from "./auth-input";
 export type { AuthInputProps } from "./auth-input";
 export { FacebookIcon, GoogleIcon, InstagramIcon, WhatsAppIcon, XIcon } from "./auth-social-icons";

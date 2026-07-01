@@ -6,9 +6,9 @@ import { SERVICES } from "./service-config";
 
 export function ServicesGrid() {
   return (
-    <StaggerReveal className="flex w-full items-start gap-6">
+    <StaggerReveal className="grid w-full grid-cols-1 gap-3 xl:grid-cols-2 xl:gap-6">
       {SERVICES.map((service) => (
-        <StaggerItem key={service.title} className="min-w-0 flex-1">
+        <StaggerItem key={service.title} className="min-w-0">
           <ServiceCard
             title={service.title}
             description={service.description}

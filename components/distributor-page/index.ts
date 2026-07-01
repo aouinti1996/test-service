@@ -1,3 +1,4 @@
+export { DistributorHeroGradientMobile } from "./distributor-hero-gradient-mobile";
 export { DistributorHeroSection } from "./distributor-hero-section";
 export type { DistributorHeroSectionProps } from "./distributor-hero-section";
 export { DistributorHeroCard } from "./distributor-hero-card";

@@ -6,9 +6,10 @@ import { useAuthModal } from "./auth-modal-provider";
 
 export type LoginButtonProps = {
   className?: string;
+  onClick?: () => void;
 };
 
-export function LoginButton({ className }: LoginButtonProps) {
+export function LoginButton({ className, onClick }: LoginButtonProps) {
   const { openLogin } = useAuthModal();
 
   return (
@@ -16,7 +17,10 @@ export function LoginButton({ className }: LoginButtonProps) {
       type="button"
       variant="primary"
       className={cn(className)}
-      onClick={openLogin}
+      onClick={() => {
+        openLogin();
+        onClick?.();
+      }}
     >
       Login
     </Button>

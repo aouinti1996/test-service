@@ -29,8 +29,8 @@ export function CoverageCommunityCard({
         className,
       )}
     >
-      <div className="relative h-[180px] w-full overflow-hidden p-6">
-        <div className="absolute left-6 top-6 flex size-10 items-center justify-center rounded-[10px] bg-primary-subtle-bg shadow-[0px_2px_4px_rgba(0,0,0,0.08)]">
+      <div className="relative h-[180px] w-full overflow-hidden p-4 xl:p-6">
+        <div className="absolute left-4 top-4 flex size-10 items-center justify-center rounded-[10px] bg-primary-subtle-bg shadow-[0px_2px_4px_rgba(0,0,0,0.08)] xl:left-6 xl:top-6">
           <Icon icon={icon} variant="primary" size={24} strokeWidth={2} />
         </div>
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -46,9 +46,11 @@ export function CoverageCommunityCard({
         </div>
       </div>
 
-      <div className="flex flex-col gap-5 p-8">
-        <h3 className="text-heading-h3-bold text-text-heading">{title}</h3>
-        <p className="text-body-small-regular text-text-secondary">
+      <div className="flex flex-col gap-3 p-4 xl:gap-5 xl:p-8">
+        <h3 className="text-xl font-bold leading-7 text-text-heading xl:text-heading-h3-bold">
+          {title}
+        </h3>
+        <p className="text-sm leading-5 text-text-secondary xl:text-body-small-regular">
           {description}
         </p>
         <ul className="flex flex-col gap-3">
@@ -59,7 +61,7 @@ export function CoverageCommunityCard({
                 strokeWidth={2}
                 aria-hidden
               />
-              <span className="text-body-small-medium text-text-heading">
+              <span className="text-sm font-medium leading-5 text-text-heading xl:text-body-small-medium">
                 {feature}
               </span>
             </li>

@@ -7,7 +7,9 @@ import { Navbar } from "@/components/navbar";
 export default function ContactPage() {
   return (
     <>
-      <Navbar activeHref="/contact" />
+      <div className="hidden xl:block">
+        <Navbar activeHref="/contact" />
+      </div>
       <ContactHeroSection />
       <ContactMessageSection />
     </>

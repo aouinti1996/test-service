@@ -9,7 +9,7 @@ export function CtaPhone({ className }: CtaPhoneProps) {
   return (
     <div
       className={cn(
-        "relative flex h-[640px] w-[400px] shrink-0 flex-col items-center justify-center",
+        "relative flex h-auto w-full shrink-0 flex-col items-center justify-center xl:h-[640px] xl:w-[400px]",
         className,
       )}
     >

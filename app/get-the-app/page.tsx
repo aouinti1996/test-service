@@ -9,7 +9,7 @@ export default function GetTheAppPage() {
     <>
       <GetTheAppHeroSection />
       <GetTheAppFeaturesSection />
-      <CtaSection />
+      <CtaSection containerClassName="pt-10" />
     </>
   );
 }

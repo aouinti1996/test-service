@@ -47,26 +47,28 @@ export function IntegrationOptionsSection({
 }: IntegrationOptionsSectionProps) {
   return (
     <AnimatedSection variant="default" className={cn("w-full", className)}>
-      <SiteContainer className="flex flex-col items-center gap-14 px-20 py-20">
+      <SiteContainer className="flex flex-col gap-4 px-4 py-6 xl:items-center xl:gap-14 xl:px-20 xl:py-20">
         <SectionHeader
+          className="gap-4"
+          descriptionClassName="text-base leading-6"
           title={
             <>
-              <span className="text-primary-subtle-text">Flexible</span>
+              <span className="text-primary-600 xl:text-primary-subtle-text">Flexible</span>
               {" Integration Options"}
             </>
           }
           description="Choose the integration depth that matches your product roadmap."
         />
 
-        <StaggerReveal className="flex w-full gap-6">
+        <StaggerReveal className="flex w-full flex-col gap-3 xl:flex-row xl:items-stretch xl:gap-6">
           {INTEGRATION_OPTIONS.map((option) => (
-            <StaggerItem key={option.badge} className="min-w-0 flex-1">
-              <IntegrationOptionCard {...option} />
+            <StaggerItem key={option.badge} className="flex min-w-0 flex-1">
+              <IntegrationOptionCard {...option} className="w-full" />
             </StaggerItem>
           ))}
         </StaggerReveal>
 
-        <div className="flex w-fit items-center justify-center rounded-2xl bg-bg-elevated py-4 shadow-[0px_1px_1px_rgba(63,63,68,0.05),0px_1px_1.5px_rgba(63,63,68,0.1)]">
+        <div className="hidden w-fit items-center justify-center rounded-2xl bg-bg-elevated py-4 shadow-[0px_1px_1px_rgba(63,63,68,0.05),0px_1px_1.5px_rgba(63,63,68,0.1)] xl:flex">
           {INTEGRATION_OPTION_FEATURES.map((feature, index) => (
             <Fragment key={feature.title}>
               {index > 0 ? (
